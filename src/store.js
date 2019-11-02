@@ -1,7 +1,7 @@
 'use strict'
 
 const FlexFileStore = require('./backends/files')
-const MockStore = require('./backends/mock')
+const MemoryStore = require('./backends/memory')
 
 const DEFAULT_COLLECTION = 'db'
 
@@ -20,12 +20,13 @@ class Store {
         backend = new FlexFileStore(options)
         break
       case 'mock':
+      case 'memory':
       default:
-        backend = new MockStore(options)
+        backend = new MemoryStore(options)
         break
     }
 
-    return new Store({backend, ...options})
+    return new Store({ backend, ...options })
   }
 
   async get (key) {

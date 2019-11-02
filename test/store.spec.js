@@ -4,6 +4,7 @@ const chai = require('chai')
 // const sinon = require('sinon')
 const { expect } = chai
 chai.use(require('dirty-chai'))
+chai.should()
 // chai.use(require('sinon-chai'))
 
 const Store = require('../src/store')
