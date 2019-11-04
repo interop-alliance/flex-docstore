@@ -7,11 +7,11 @@ chai.use(require('dirty-chai'))
 chai.should()
 // chai.use(require('sinon-chai'))
 
-const Store = require('../src/store')
+const { FlexDocStore } = require('../src/store')
 
-describe('Store', () => {
+describe('FlexDocStore', () => {
   it('should exist', () => {
-    const store = new Store({})
+    const store = new FlexDocStore({})
     expect(store).to.exist()
   })
 })
