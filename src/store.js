@@ -55,7 +55,7 @@ class FlexDocStore {
     this.validateKey(key)
 
     const doc = await this.backend.get(key)
-    if (!this.modelClass) {
+    if (!this.modelClass || !doc) {
       return doc // resolve with raw JSON
     }
 
