@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.1.1 - 2019-11-27
+
+### Changed
+
+- Fix - do not instantiate using `modelClass` if no doc is found.
+
 ## v0.1.0 - 2019-11-03
 
 ### Changed
