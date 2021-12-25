@@ -33,19 +33,19 @@ npm install flex-docstore
 ### Requiring
 
 ```js
-const Store = require('flex-docstore')
+const { FlexDocStore } = require('flex-docstore')
 ```
 
 ### FS Backend (one file per object)
 
 ```js
-const store = Store.using('files', { dir: './db' })
+const store = FlexDocStore.using('files', { dir: './db' })
 ```
 
 ### Mock Backend (for unit testing)
 
 ```js
-const store = Store.using('mock')
+const store = FlexDocStore.using('mock')
 ```
 
 ## API
@@ -87,7 +87,7 @@ await store.remove('key1')
 Lists all documents in the store.
 
 ```
-await store.allDocs()
+await store.allDocs({ include_docs: false })
 ```
 
 ## Contribute
