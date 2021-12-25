@@ -8,11 +8,14 @@ const { Store: FileStore } = require('fs-json-store')
 
 class FlexFileBackend {
   /**
-   * @param dir {string}
-   * @param collection {string}
+   * @param [dir] {string}
+   * @param [collection] {string}
    * @param [extension] {string}
    */
   constructor ({ dir, collection, extension = '.json' } = {}) {
+    if (!dir && !collection) {
+      throw new TypeError('Either "dir" or "collection" param is required.')
+    }
     this.dir = dir || collection
     this.extension = extension
   }
