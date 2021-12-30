@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.0.0 - 2021-12-29
+
+### Changed
+- **BREAKING**: Add validation to FlexFileBackend constructor.
+
 ## v0.1.1 - 2019-11-27
 
 ### Changed
